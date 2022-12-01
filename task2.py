@@ -48,6 +48,8 @@ def main():
             break
         frame_index += 1
     
+    if not os.path.exists("task2_output"):
+        os.mkdir("task2_output")
     output_dir = os.path.join("task2_output", f"{video_index}")
     for i, frame in enumerate(frames):
         cv2.imshow("Frame", frame)

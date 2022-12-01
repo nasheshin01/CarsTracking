@@ -34,6 +34,8 @@ def main():
     print("Total frames count:", len(frames))
     print("Unique frames count:", len(cleaned_frames))
 
+    if not os.path.exists("task3_output"):
+        os.mkdir("task3_output")
     output_dir = os.path.join("task3_output", f"{video_index}")
     for i, frame in enumerate(cleaned_frames):
         cv2.imshow("Frame", frame)
